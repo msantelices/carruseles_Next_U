@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --card-background: #f3f2f2;
+    --gray: #A1A1A1;
+    --gray-dark: #686868;
+    --white: #ffffff;
+    --red-light: #DE7055;
+    --green: #3A8C8C;
+    --black: rgb(58, 58, 58);
+    --dscto: #030303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: var(--gray);
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-dark);
+}
+
+body {
+    overflow-y: scroll;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    margin: 0 5% 0 5%;
+}
+
+header .title {
+    display: flex;
+    padding: 6% 0 5% 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+header .title .search {
+    width: 62%;
+}
+
+header .title .search input {
+    width: 100%;
+    padding: 3%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.6rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 4px var(--gray);
+}
+
+header .title .cart-icon {
+    width: 10%;
+    display: flex;
+}
+
+header .title .cart-icon img {
+    width: 95%;
+}
+
+header .navbar {
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .navbar a {
+    padding: 0 2%;
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.banner {
+    width: 100%;
+    margin: 6% 0 4% 0;
+}
+
+.banner figure {
+    width: 100%;
+}
+
+.banner figure img {
+    width: 100%;
+}
+
+.division {
+    padding: 3%;
+}
+
+.division h2 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--green);
+}
+
+.division p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+}
+
+.products {
+    min-height: calc(100vh - 30vh);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.products .product-card {
+    width: 100%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*modifications for carousel*/
+.glide {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.glide__slide {
+    text-align: center;
+    margin: 3% 0 4% 0;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info,
+.products .product-card .product-card-info {
+    background-color: var(--card-background);
+    border-radius: 0.8rem;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info figure,
+.products .product-card .product-card-info figure {
+    width: 100%;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info figure img,
+.products .product-card .product-card-info figure img {
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info section,
+.products .product-card .product-card-info section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4%;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info .name {
+    align-items: flex-end;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info .name .product-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info .name .product-name img {
+    width: 30%;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info section .dscto {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-decoration: line-through;
+    color: var(--gray-dark);
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info section h2,
+.products .product-card .product-card-info section h2 {
+    font-size: 1rem;
+    color: var(--red-light);
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-info section p,
+.products .product-card .product-card-info section p {
+    font-size: 0.75rem;
+    margin-bottom: 2%;
+}
+
+.carousel div .glide__track .glide__slides li .product-card .product-card-button button,
+.products .product-card .product-card-button button {
+    width: 100%;
+    padding: 5%;
+    font-size: 0.9rem;
+    border: 0.1rem;
+    border-radius: 0.5rem;
+    margin-top: 4%;
+    font-family: 'Poppins';
+    background-color: var(--red-light);
+    color: var(--white);
+    box-shadow: 0 2px 4px var(--gray);
+    cursor: pointer;
+}
+
+.carousel .glide .glide__arrows .glide__arrow {
+    background: none;
+    width: 0%;
+    border: none;
+    box-shadow: none;
+}
+
+.carousel .glide .glide__arrows .glide__arrow img {
+    width: 0%;
+}
+
+
+.carousel .glide .glide__bullets {
+    margin-top: 2%;
+}
+
+.carousel .glide .glide__bullets .glide__bullet--active {
+    background-color: var(--green);
+}
+
+/*end*/
+
+footer {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 768px) {
+    header .title {
+        padding: 4% 0 2% 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .title h1 {
+        width: 25%;
+        font-size: 2.7rem;
+        font-weight: 400;
+    }
+
+    header .title .search {
+        width: 50%;
+    }
+
+    header .title .search input {
+        width: 100%;
+        padding: 2.5%;
+        border-radius: 0.6rem;
+    }
+
+    header .title .cart-icon {
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header .title .cart-icon img {
+        width: 22%;
+    }
+
+    header .navbar {
+        justify-content: flex-start;
+    }
+
+    header .navbar a {
+        padding: 0 4% 0 0;
+    }
+
+    .carousel .glide {
+        width: 70%;
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow {
+        width: 6%;
+        background: transparent;
+        padding: 1%;
+        box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, .1);
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow img {
+        width: 100%;
+        padding: 5%;
+        cursor: pointer;
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow.glide__arrow--right {
+        right: -5em;
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow.glide__arrow--left {
+        left: -5em;
+    }
+
+    .banner {
+        margin: 3% 0 2% 0;
+    }
+
+    .division h2 {
+        font-size: 1.2rem;
+    }
+
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+}
+
+/* Media query for larger screens (monitors) */
+@media screen and (min-width: 1024px) {
+
+    header .title {
+        padding: 3% 0 1% 0;
+        align-items: center;
+    }
+
+    header .title h1 {
+        width: 25%;
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+
+    header .title .search {
+        width: 50%;
+    }
+
+    header .title .search input {
+        width: 100%;
+        padding: 2%;
+    }
+
+    header .title .cart-icon {
+        height: 100%;
+    }
+
+    header .title .cart-icon img {
+        width: 18%;
+    }
+
+    .banner {
+        height: 70vh;
+        width: 100%;
+    }
+
+    .banner figure {
+        height: 100%;
+    }
+
+    .banner figure img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel .glide {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow {
+        width: 3.8%;
+        padding: 0.5%;
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow.glide__arrow--right {
+        right: -6em;
+    }
+
+    .carousel .glide .glide__arrows .glide__arrow.glide__arrow--left {
+        left: -6em;
+    }
+
+    .division {
+        padding: 1%;
+    }
+
+    .products {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+        padding: 0 4rem;
+        max-width: 1366px;
+        margin: auto;
+    }
+}
